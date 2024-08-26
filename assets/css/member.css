@@ -1,0 +1,275 @@
+:root {
+  /**
+   * Colors
+   */
+  --rich-black-fogra-29-50: hsl(210, 26%, 11%, 0.5);
+  --rich-black-fogra-29-1: hsl(210, 26%, 11%);
+  --silver-metallic: hsl(212, 9%, 67%);
+  --coquelicot: hsl(233, 46%, 34%);
+  --light-gray: hsl(0, 0%, 80%);
+  --gainsboro: hsl(0, 0%, 88%);
+  --white: hsl(0, 0%, 100%);
+
+  /**
+   * Typography
+   */
+  --ff-rubik: 'Rubik', sans-serif;
+  --fs-1: 2.5rem;
+  --fs-2: 2rem;
+  --fs-3: 1.6rem;
+  --fs-4: 1.4rem;
+  --fs-5: 1.2rem;
+  --fs-6: 1rem;
+  --fw-700: 700;
+  --fw-500: 500;
+
+  /**
+   * Spacing
+   */
+  --section-padding: 4rem;
+
+  /**
+   * Shadow
+   */
+  --shadow-1: 0 2px 8px var(--rich-black-fogra-29-50);
+  --shadow-2: 0px 4px 12px var(--coquelicot);
+
+  /**
+   * Border Radius
+   */
+  --radius-8: 8px;
+  --radius-5: 5px;
+
+  /**
+   * Transition
+   */
+  --transition-1: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-rubik);
+}
+
+body {
+  background-color: var(--light-gray);
+  color: var(--rich-black-fogra-29-1);
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 60px; /* Espaço para o header */
+  padding-bottom: 60px; /* Espaço para o footer */
+}
+
+.navbar {
+  background: var(--coquelicot);
+  height: 50px;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-1);
+  transition: background-color var(--transition-1);
+}
+
+.navbar__logo {
+  color: var(--white);
+  text-decoration: none;
+  font-size: var(--fs-2);
+}
+
+.navbar__logo:hover {
+  color: var(--silver-metallic);
+}
+
+.navbar__menu {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navbar__link {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: var(--fs-5);
+  transition: color var(--transition-1);
+}
+
+.navbar__link:hover {
+  color: var(--silver-metallic);
+}
+
+.navbar__toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar__toggle .bar {
+  width: 20px;
+  height: 2px;
+  margin: 4px auto;
+  background: var(--white);
+  transition: all var(--transition-1);
+}
+
+.memberships {
+  background: var(--white);
+  color: var(--rich-black-fogra-29-1);
+  padding: var(--section-padding) 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.memberships::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/backgrund3.png');
+  background-size: 32% auto;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.memberships h1 {
+  font-size: var(--fs-1);
+  margin-bottom: 0.5rem;
+  color: var(--coquelicot);
+  position: relative;
+  z-index: 1;
+}
+
+.membership__desc {
+  font-size: var(--fs-5);
+  margin-bottom: 2rem;
+  color: var(--rich-black-fogra-29-1);
+  position: relative;
+  z-index: 1;
+}
+
+.membership__wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.membership__card {
+  padding: 1rem;
+  width: 250px;
+  background: var(--white);
+  color: var(--rich-black-fogra-29-1);
+  border-radius: var(--radius-5);
+  box-shadow: var(--shadow-2);
+  transition: transform var(--transition-1), box-shadow var(--transition-1);
+  position: relative;
+}
+
+.membership__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px var(--black_10);
+}
+
+.membership__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: var(--coquelicot);
+  margin-bottom: 0.5rem;
+}
+
+.membership__title h1 {
+  font-size: var(--fs-4);
+  margin: 0.5rem 0;
+  color: var(--coquelicot);
+}
+
+.membership__title h3 {
+  font-size: var(--fs-5);
+  color: var(--rich-black-fogra-29-1);
+}
+
+.membership__perks {
+  margin-bottom: 1.5rem;
+}
+
+.membership__perks p {
+  font-size: var(--fs-6);
+  margin: 0.5rem 0;
+}
+
+.button {
+  border: 2px solid var(--coquelicot);
+  padding: 0.5rem 1rem;
+  color: var(--coquelicot);
+  background-color: var(--white);
+  text-decoration: none;
+  border-radius: var(--radius-5);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  transition: background-color var(--transition-1), color var(--transition-1);
+}
+
+.button:hover {
+  background-color: var(--coquelicot);
+  color: var(--white);
+}
+
+.footer {
+  background: var(--coquelicot);
+  color: var(--white);
+  text-align: center;
+  padding: 0.75rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: var(--shadow-1);
+}
+
+@media (max-width: 768px) {
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: var(--coquelicot);
+    z-index: 1000;
+  }
+
+  .navbar__menu.active {
+    display: flex;
+  }
+
+  .navbar__toggle {
+    display: block;
+  }
+
+  .membership__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .membership__card {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+}

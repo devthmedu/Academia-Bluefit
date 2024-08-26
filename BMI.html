@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+					content="width=device-width, initial-scale=1.0, user-scalable=no">
+						<!-- Favicon -->
+						<link rel="shortcut icon"
+									href="./favicon.svg"
+									type="image/svg+xml">
+						
+						<!-- Fonte do Google -->
+						<link rel="preconnect"
+									href="https://fonts.googleapis.com">
+						<link rel="preconnect"
+									href="https://fonts.gstatic.com"
+									crossorigin>
+						<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+									rel="stylesheet">
+						
+						<!-- Meta Tags de SEO -->
+						<meta name="description"
+									content="Bluefit é o melhor clube de fitness para quem busca melhorar sua qualidade de vida. Oferecemos programas de treino personalizados, orientações de profissionais e uma estrutura completa para atender suas necessidades.">
+						<meta name="keywords"
+									content="academia, fitness, saúde, bem-estar, musculação, yoga, HIIT, Bluefit">
+						<meta name="author"
+									content="Bluefit">
+
+		<title>Calculadora de IMC | Bluefit</title>
+		<link rel="stylesheet"
+					type="text/css"
+					href="./assets/css/BMI.css">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+					rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+					rel="stylesheet">
+		<link rel="stylesheet"
+					href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+					
+	</head>
+
+	<body>
+		<nav class="navbar">
+			<a href="/"
+				 class="navbar__logo">Bluefit <i class="fas fa-dumbbell"></i></a>
+			<div class="navbar__menu">
+				<a href="index.html"
+					 class="navbar__link">Início</a>
+				<a href="about.html"
+					 class="navbar__link">Sobre</a>
+				<a href="contact.html"
+					 class="navbar__link">Contato</a>
+			</div>
+			<div class="navbar__toggle"
+					 aria-label="Abrir menu">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+		</nav>
+
+		<main class="container">
+			<section class="panel">
+				<h2 class="text-center">Calcule Seu IMC <i class="fas fa-chart-line"></i></h2>
+				<p id="introText"
+					 class="text-center">Digite seu peso e altura abaixo para ver os resultados do seu IMC. <i class="fas fa-running"></i></p>
+
+				<form id="bmiForm">
+					<div id="weightInput"
+							 class="form-group">
+						<label for="weight">Seu peso (KG) <i class="fas fa-weight"></i></label>
+						<input id="weight"
+									 type="number"
+									 pattern="[0-9]*"
+									 name="weight"
+									 placeholder="ex: 70"
+									 required />
+					</div>
+					<div id="heightInput"
+							 class="form-group">
+						<label for="height">Sua altura (CM) <i class="fas fa-ruler-vertical"></i></label>
+						<input id="height"
+									 type="number"
+									 pattern="[0-9]*"
+									 name="height"
+									 placeholder="ex: 175"
+									 required />
+					</div>
+					<button type="button"
+									class="btn"
+									onclick="calculate()">Calcular IMC <i class="fas fa-search"></i></button>
+				</form>
+				<div id="results"
+						 class="text-center">
+					Seus resultados de IMC aparecerão aqui <i class="fas fa-bullseye"></i>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<p>&copy; 2024 Bluefit. Todos os direitos reservados.</p>
+		</footer>
+
+		<script src="./assets/js/BMI.js"></script>
+	</body>
+
+</html>

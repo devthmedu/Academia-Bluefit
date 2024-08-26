@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <!-- Favicon -->
+        <link rel="shortcut icon"
+              href="./favicon.svg"
+              type="image/svg+xml">
+
+        <!-- CSS Personalizado -->
+        <link rel="stylesheet"
+              href="./assets/css/style.css">
+
+        <!-- Fonte do Google -->
+        <link rel="preconnect"
+              href="https://fonts.googleapis.com">
+        <link rel="preconnect"
+              href="https://fonts.gstatic.com"
+              crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+              rel="stylesheet">
+
+        <!-- Preload de Imagens -->
+        <link rel="preload"
+              as="image"
+              href="./assets/images/hero-banner.png">
+        <link rel="preload"
+              as="image"
+              href="./assets/images/hero-circle-one.png">
+        <link rel="preload"
+              as="image"
+              href="./assets/images/hero-circle-two.png">
+        <link rel="preload"
+              as="image"
+              href="./assets/images/heart-rate.svg">
+        <link rel="preload"
+              as="image"
+              href="./assets/images/calories.svg">
+
+        <!-- Meta Tags de SEO -->
+        <meta name="description"
+              content="Bluefit é o melhor clube de fitness para quem busca melhorar sua qualidade de vida. Oferecemos programas de treino personalizados, orientações de profissionais e uma estrutura completa para atender suas necessidades.">
+        <meta name="keywords"
+              content="academia, fitness, saúde, bem-estar, musculação, yoga, HIIT, Bluefit">
+        <meta name="author"
+              content="Bluefit">
+
+        <title>Mensagens de Contato | Bluefit</title>
+        <link rel="stylesheet"
+              href="./assets/css/Contactus.css">
+    </head>
+
+    <body>
+        <!-- Navegação -->
+        <nav class="navbar">
+            <a href="/"
+               class="navbar__logo">Bluefit</a>
+            <div class="navbar__menu">
+                <a href="index.html"
+                   class="navbar__link">Início</a>
+                <a href="explore.html"
+                   class="navbar__link">Explorar</a>
+                <a href="cardio.html"
+                   class="navbar__link">Cardio & Força</a>
+                <a href="contact.html"
+                   class="navbar__link">Contato</a>
+            </div>
+            <div class="navbar__toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+
+        <!-- Seção de Introdução -->
+        <header class="header">
+            <div class="header__content">
+                <!-- Conteúdo do cabeçalho se necessário -->
+            </div>
+        </header>
+
+        <!-- Formulário de Contato -->
+        <div class="container">
+            <form action=""
+                  id="contactForm">
+                <div class="alert">Sua mensagem foi enviada!</div>
+
+                <div class="inputBox">
+                    <input type="text"
+                           id="name"
+                           placeholder="Seu nome..."
+                           autocomplete="off"
+                           required />
+                </div>
+
+                <div class="inputBox">
+                    <input type="email"
+                           id="emailid"
+                           placeholder="Seu e-mail..."
+                           autocomplete="off"
+                           required />
+                </div>
+
+                <div class="inputBox">
+                    <textarea id="msgContent"
+                              cols="30"
+                              rows="10"
+                              placeholder="Mensagem"
+                              required></textarea>
+                </div>
+
+                <div class="inputBox">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Informações de Contato -->
+        <section class="contact-info">
+            <h2>Informações de Contato</h2>
+            <div class="contact-info__details">
+                <p><strong>Telefone:</strong> (11) 1234-5678</p>
+                <p><strong>Email:</strong> contato@bluefit.com.br</p>
+                <p><strong>Endereço:</strong> Rua Fitness, 123, São Paulo - SP</p>
+            </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <p>&copy; 2024 Bluefit. Todos os direitos reservados.</p>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+        <script src="./assets/js/contato.js"></script>
+    </body>
+
+</html>

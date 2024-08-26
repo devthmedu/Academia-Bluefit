@@ -1,0 +1,395 @@
+:root {
+  /**
+   * colors
+   */
+  --rich-black-fogra-29_50: hsl(210, 26%, 11%, 0.5);
+  --rich-black-fogra-29-1: hsl(210, 26%, 11%);
+  --rich-black-fogra-29-2: hsl(210, 50%, 4%);
+  --silver-metallic: hsl(212, 9%, 67%);
+  --coquelicot_20: #2f387f;
+  --coquelicot_10: #02053b;
+  --sonic-silver: hsl(0, 0%, 47%);
+  --cadet-gray: hsl(214, 15%, 62%);
+  --light-gray: hsl(0, 0%, 80%);
+  --coquelicot: hsl(233, 46%, 34%);
+  --gainsboro: hsl(0, 0%, 88%);
+  --white_20: hsl(0, 0%, 100%, 0.2);
+  --white_10: hsl(0, 0%, 100%, 0.1);
+  --black_10: hsl(0, 0%, 0%, 0.1);
+  --white: hsl(0, 0%, 100%);
+
+  /**
+   * typography
+   */
+  --ff-catamaran: 'Catamaran', sans-serif;
+  --ff-rubik: 'Rubik', sans-serif;
+
+  --fs-1: 3.8rem;
+  --fs-2: 3rem;
+  --fs-3: 2.5rem;
+  --fs-4: 2rem;
+  --fs-5: 1.8rem;
+  --fs-6: 1.5rem;
+
+  --fw-900: 900;
+  --fw-800: 800;
+  --fw-700: 700;
+  --fw-500: 500;
+
+  /**
+   * spacing
+   */
+  --section-padding: 80px;
+
+  /**
+   * transition
+   */
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+/* Reset básico para garantir que todos os navegadores comecem do mesmo ponto */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+img,
+span,
+input,
+button,
+strong,
+ion-icon { display: block; }
+
+img { height: auto; }
+
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input { width: 100%; }
+
+button { cursor: pointer; }
+
+ion-icon { pointer-events: none; }
+
+address { font-style: normal; }
+
+html {
+  font-family: var(--ff-rubik);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url('https://images.unsplash.com/photo-1434596922112-19c563067271?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed; /* Imagem de fundo */
+  background-size: cover;
+  color: var(--sonic-silver);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+/* Estilo da navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: var(--rich-black-fogra-29_50); /* Fundo semi-transparente */
+  color: var(--white);
+}
+
+.navbar__logo {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-700);
+  color: var(--white);
+  text-decoration: none;
+  transition: color var(--transition-1);
+}
+
+.navbar__logo:hover {
+  color: var(--coquelicot); /* Cor de destaque */
+}
+
+.navbar__menu {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar__link {
+  color: var(--white);
+  text-decoration: none;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  transition: color var(--transition-1);
+}
+
+.navbar__link:hover {
+  color: var(--coquelicot); /* Cor de destaque */
+}
+
+.navbar__toggle {
+  display: none; /* Esconder o botão de menu para telas maiores */
+}
+
+/* Estilo do cabeçalho */
+.header {
+  text-align: center;
+  color: var(--white);
+  padding: 60px 20px;
+  border-radius: var(--radius-8);
+  margin-bottom: 40px;
+}
+
+.header__content h1 {
+  font-size: var(--fs-1);
+  margin-bottom: 35px;
+  font-weight: var(--fw-700);
+  color: var(--coquelicot); /* Cor de destaque */
+}
+
+.header__content p {
+  font-size: var(--fs-4);
+  line-height: 1.8;
+  color: var(--white);
+}
+
+/* Estilo do container do formulário */
+.container {
+  max-width: 750px;
+  width: 100%;
+  border-radius: var(--radius-10);
+  padding: 40px;
+  margin: 0 auto;
+}
+
+/* Estilo do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.alert {
+  background: var(--coquelicot); /* Cor de confirmação */
+  color: var(--white);
+  padding: 15px;
+  border-radius: var(--radius-5);
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: var(--fs-6);
+  display: none; /* Inicialmente escondido */
+}
+
+.inputBox {
+  margin-bottom: 25px;
+}
+
+.inputBox input,
+.inputBox textarea {
+    background-color: #fff;
+  width: 100%;
+  padding: 14px;
+  border: 3px solid var(--gainsboro);
+  border-radius: var(--radius-8);
+  font-size: var(--fs-5);
+  font-family: var(--ff-rubik);
+  transition: border-color var(--transition-1);
+}
+
+.inputBox input:focus,
+.inputBox textarea:focus {
+  border-color: var(--coquelicot);
+  outline: none;
+}
+
+.inputBox button {
+  background: var(--coquelicot);
+  color: var(--white);
+  border: none;
+  padding: 16px;
+  border-radius: var(--radius-8);
+  font-size: var(--fs-5);
+  cursor: pointer;
+  transition: background var(--transition-1);
+}
+
+.inputBox button:hover {
+  background: var(--coquelicot_20);
+}
+
+/* Estilo da seção de informações de contato */
+.contact-info {
+  padding: 40px;
+  border-radius: var(--radius-10);
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contact-info h2 {
+  font-size: var(--fs-3);
+  margin-bottom: 20px;
+  font-weight: var(--fw-700);
+  color: var(--coquelicot); /* Cor de destaque */
+}
+
+.contact-info__details p {
+  font-size: var(--fs-5);
+  line-height: 1.8;
+  color: #fff;
+}
+
+/* Estilo do rodapé */
+.footer {
+  background: var(--rich-black-fogra-29_50); /* Fundo semi-transparente */
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar__menu {
+    display: none; /* Esconder o menu para telas menores */
+  }
+  
+  .navbar__toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .navbar__toggle .bar {
+    width: 30px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 2px;
+  }
+  
+  .header__content h1 {
+    font-size: var(--fs-2);
+  }
+  
+  .header__content p {
+    font-size: var(--fs-5);
+  }
+  
+  .contact-info {
+    padding: 20px;
+  }
+  
+  .inputBox input,
+  .inputBox textarea {
+    padding: 12px;
+    font-size: var(--fs-6);
+  }
+  
+  .inputBox button {
+    padding: 14px;
+    font-size: var(--fs-5);
+  }
+}
+/* Estilo da navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: var(--rich-black-fogra-29_50); /* Fundo semi-transparente */
+  color: var(--white);
+}
+
+.navbar__logo {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-700);
+  color: var(--white);
+  text-decoration: none;
+  transition: color var(--transition-1);
+}
+
+.navbar__logo:hover {
+  color: var(--coquelicot); /* Cor de destaque */
+}
+
+.navbar__menu {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar__link {
+  color: var(--white);
+  text-decoration: none;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  padding: 10px 15px;
+  border-radius: var(--radius-5);
+  transition: background var(--transition-1), color var(--transition-1);
+}
+
+.navbar__link:hover {
+  background: var(--coquelicot_10); /* Cor de fundo ao passar o mouse */
+  color: var(--white);
+}
+
+.navbar__toggle {
+  display: none; /* Esconder o botão de menu para telas maiores */
+}
+
+/* Estilo para menu mobile */
+@media (max-width: 768px) {
+  .navbar__menu {
+    display: none; /* Esconder o menu para telas menores */
+    position: absolute;
+    top: 60px; /* Ajustar conforme necessário */
+    right: 20px;
+    background: var(--rich-black-fogra-29_50);
+    border-radius: var(--radius-10);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    width: 200px;
+    padding: 10px 0;
+  }
+
+  .navbar__toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .navbar__toggle .bar {
+    width: 30px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 2px;
+  }
+  
+  .navbar__menu.active {
+    display: flex; /* Mostrar o menu quando ativo */
+  }
+
+  .navbar__link {
+    padding: 15px 20px;
+    font-size: var(--fs-5);
+  }
+}

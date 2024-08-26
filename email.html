@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Autenticação Firebase</title>
+    <link rel="stylesheet"
+          href="./assets/css/first.css">
+  </head>
+
+  <body>
+    <div id="login-box">
+      <div class="left">
+        <h1 id="status"
+            style="text-align: center">Entrar</h1>
+        <input type="text"
+               id="username"
+               name="username"
+               placeholder="Nome de usuário"
+               autocomplete="off" />
+        <input type="email"
+               id="email"
+               name="email"
+               placeholder="E-mail"
+               autocomplete="off" />
+        <input type="password"
+               id="password"
+               name="password"
+               placeholder="Senha"
+               autocomplete="off" />
+        <input type="button"
+               id="signUp"
+               name="signup_submit"
+               value="Cadastrar" />
+        <input type="button"
+               id="login"
+               name="login"
+               value="Entrar" />
+      </div>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+      import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+      import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+
+      // Configuração do Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyCdqZWNbLE2blkimCu-1bEYCNP-MBZCXCI",
+        authDomain: "glamfit-d724b.firebaseapp.com",
+        databaseURL: "https://glamfit-d724b-default-rtdb.firebaseio.com",
+        projectId: "glamfit-d724b",
+        storageBucket: "glamfit-d724b.appspot.com",
+        messagingSenderId: "898120410759",
+        appId: "1:898120410759:web:79790a312556bf6b88ba22"
+      };
+
+      // Inicializa o Firebase
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+      const auth = getAuth();
+
+      // Cadastrar novo usuário
+      document.getElementById('signUp').addEventListener('click', (e) => {
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            set(ref(database, 'users/' + user.uid), {
+              username: username,
+              email: email
+            }).then(() => {
+              alert('Usuário criado com sucesso! Agora faça o login.');
+            }).catch((error) => {
+              alert('Erro ao salvar dados do usuário: ' + error.message);
+            });
+          })
+          .catch((error) => {
+            alert('Erro ao criar conta: ' + error.message);
+          });
+      });
+
+      // Fazer login
+      document.getElementById('login').addEventListener('click', (e) => {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            const dt = new Date();
+            update(ref(database, 'users/' + user.uid), {
+              last_login: dt.toISOString()
+            }).then(() => {
+              window.location.href = 'index.html'; // Redireciona para a página inicial
+            }).catch((error) => {
+              alert('Erro ao atualizar dados de login: ' + error.message);
+            });
+          })
+          .catch((error) => {
+            alert('Erro ao fazer login: ' + error.message);
+          });
+      });
+    </script>
+  </body>
+
+</html>

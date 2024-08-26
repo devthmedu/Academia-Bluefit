@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon"
+              href="./favicon.svg"
+              type="image/svg+xml">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect"
+              href="https://fonts.googleapis.com">
+        <link rel="preconnect"
+              href="https://fonts.gstatic.com"
+              crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+              rel="stylesheet">
+
+        <!-- Meta Tags for SEO -->
+        <meta name="description"
+              content="Bluefit é o melhor clube de fitness para quem busca melhorar sua qualidade de vida. Oferecemos programas de treino personalizados, orientações de profissionais e uma estrutura completa para atender suas necessidades.">
+        <meta name="keywords"
+              content="academia, fitness, saúde, bem-estar, musculação, yoga, HIIT, Bluefit">
+        <meta name="author"
+              content="Bluefit">
+
+        <title>Planos de Associação</title>
+        <link rel="stylesheet"
+              href="./assets/css/member.css">
+
+        <!-- Font Awesome for Icons -->
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <a href="/"
+               class="navbar__logo">Bluefit</a>
+            <div class="navbar__menu">
+                <a href="index.html"
+                   class="navbar__link">Início</a>
+                <a href="#membresias"
+                   class="navbar__link">Planos</a>
+                <a href="#contato"
+                   class="navbar__link">Contato</a>
+            </div>
+            <div class="navbar__toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+
+        <div class="memberships"
+             id="membresias">
+            <h1>Veja Nossos Planos</h1>
+            <p class="membership__desc">Comece hoje e receba 25% de desconto no seu primeiro mês</p>
+            <div class="membership__wrapper">
+                <div class="membership__card">
+                    <div class="membership__title">
+                        <i class="fas fa-dumbbell card-icon"></i>
+                        <h1>Iniciante</h1>
+                        <h3>R$ 750/mês</h3>
+                    </div>
+                    <div class="membership__perks">
+                        <p>Acesso a Treinadores Top 24/7.</p>
+                        <p>Solicite um plano e guia adequado.</p>
+                    </div>
+                    <a href="/"
+                       class="button">Junte-se Agora</a>
+                </div>
+
+                <div class="membership__card">
+                    <div class="membership__title">
+                        <i class="fas fa-bicycle card-icon"></i>
+                        <h1>Prata</h1>
+                        <h3>R$ 1500/mês</h3>
+                    </div>
+                    <div class="membership__perks">
+                        <p>Acesso a Treinadores Top, Plano de Dieta e Guia Completo.</p>
+                        <p>Aulas de fitness de acordo com suas necessidades.</p>
+                    </div>
+                    <a href="/"
+                       class="button">Junte-se Agora</a>
+                </div>
+
+                <div class="membership__card">
+                    <div class="membership__title">
+                        <i class="fas fa-dumbbell card-icon"></i>
+                        <h1>Ouro</h1>
+                        <h3>R$ 2500/mês</h3>
+                    </div>
+                    <div class="membership__perks">
+                        <p>Acesso total a todos os treinadores.</p>
+                        <p>Aulas de exercícios online.</p>
+                        <p>Treinamento Pessoal Privado.</p>
+                        <p>Chamada 1:1 com treinadores.</p>
+                    </div>
+                    <a href="/"
+                       class="button">Junte-se Agora</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2024 Bluefit. Todos os direitos reservados.</p>
+        </footer>
+
+        <script>
+            // JavaScript para alternar o menu móvel
+            const toggle = document.querySelector('.navbar__toggle');
+            const menu = document.querySelector('.navbar__menu');
+
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle('active');
+            });
+        </script>
+    </body>
+
+</html>

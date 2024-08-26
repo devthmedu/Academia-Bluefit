@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Bluefit</title>
+
+    <!-- Favicon -->
+    <link rel="icon"
+          href="./assets/images/Logo.png"
+          type="image/png">
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet"
+          href="./assets/css/style.css">
+
+    <!-- Fonte do Google -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Preload de Imagens -->
+    <link rel="preload"
+          as="image"
+          href="./assets/images/hero-banner.png">
+    <link rel="preload"
+          as="image"
+          href="./assets/images/heart-rate.svg">
+    <link rel="preload"
+          as="image"
+          href="./assets/images/calories.svg">
+
+    <!-- Meta Tags de SEO -->
+    <meta name="description"
+          content="Bluefit é o melhor clube de fitness para quem busca melhorar sua qualidade de vida. Oferecemos programas de treino personalizados, orientações de profissionais e uma estrutura completa para atender suas necessidades.">
+    <meta name="keywords"
+          content="academia, fitness, saúde, bem-estar, musculação, yoga, HIIT, Bluefit">
+    <meta name="author"
+          content="Bluefit">
+
+    <!-- Ícones do Ionicons -->
+    <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+            defer></script>
+  </head>
+
+  <body id="top">
+
+    <!-- Cabeçalho -->
+    <header class="header"
+            data-header>
+      <div class="container">
+
+        <a href="#home"
+           class="logo">
+          <img src="./assets/images/Logo.png"
+               alt="Logo Bluefit"
+               class="logo-image">
+          <span class="logo-text">Bluefit</span>
+        </a>
+
+        <nav class="navbar"
+             data-navbar>
+          <button class="nav-close-btn"
+                  aria-label="Fechar Menu"
+                  data-nav-toggler>
+            <ion-icon name="close-sharp"
+                      aria-hidden="true"></ion-icon>
+          </button>
+
+          <ul class="navbar-list">
+            <li><a href="#home"
+                 class="navbar-link active"
+                 data-nav-link>Início</a></li>
+            <li><a href="#about"
+                 class="navbar-link"
+                 data-nav-link>Sobre Nós</a></li>
+            <li><a href="membership.html"
+                 class="navbar-link"
+                 data-nav-link>Planos</a></li>
+            <li><a href="BMI.html"
+                 class="navbar-link"
+                 data-nav-link>Calculadora de IMC</a></li>
+            <li><a href="blog-latest.html"
+                 class="navbar-link"
+                 data-nav-link>Blog</a></li>
+            <li><a href="fitness-centre.html"
+                 class="navbar-link"
+                 data-nav-link>Unidades</a></li>
+          </ul>
+
+        </nav>
+
+        <a href="./Contactus.html"
+           class="btn b8">Dúvidas?</a>
+        <button class="nav-open-btn"
+                aria-label="Abrir Menu"
+                data-nav-toggler>
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+
+      </div>
+    </header>
+    <!-- Conteúdo Principal -->
+    <main>
+      <article>
+
+        <!-- Seção Hero -->
+        <section class="section hero bg-dark has-after has-bg-image"
+                 id="home"
+                 aria-label="hero"
+                 data-section
+                 style="background-image: url('./assets/images/hero-bg.png')">
+          <div class="container">
+
+            <div class="hero-content">
+              <p class="hero-subtitle">
+                <strong class="strong">A  Melhor</strong> Academia Fitness
+              </p>
+
+              <h1 class="h1 hero-title">Trabalhe Duro Para Uma Vida Melhor</h1>
+
+              <p class="section-text"
+                 style="color:rgb(218, 229, 235)">
+                Bluefit é a academia fitness que oferece as melhores facilidades, orientação e treinadores para você manter a forma.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section class="section about"
+                 id="about"
+                 aria-label="sobre">
+          <div class="container">
+
+            <div class="about-banner has-after">
+              <img src="./assets/images/about-banner.png"
+                   width="660"
+                   height="648"
+                   loading="lazy"
+                   alt="Banner Sobre"
+                   class="w-100">
+              <img src="./assets/images/fitness.png"
+                   width="650"
+                   height="154"
+                   loading="lazy"
+                   alt="Fitness"
+                   class="abs-img w-100">
+            </div>
+
+            <div class="about-content">
+              <p class="section-subtitle"  style="color:rgb(218, 229, 235)">Sobre Nós</p>
+              <h2 class="h2 section-title">Bem-vindo ao Bluefit</h2>
+              <p class="section-text" >
+                Nossa missão é proporcionar a você a melhor experiência de fitness, focada em suas necessidades específicas. Garantimos a mais alta qualidade em aulas e programas de treino, com uma equipe de especialistas e comodidades especiais que você não encontra em outros lugares. Acreditamos em ser diferentes.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Seção de Vídeo -->
+        <section class="section video"
+                 aria-label="vídeo">
+          <div class="container">
+            <h2 class="h2 section-title text-center"
+                style="text-align: center;">Comece Sua Jornada Fitness!</h2>
+            <div class="container">
+
+              <ul class="class-list has-scrollbar">
+
+                <li class="scrollbar-item">
+                  <div class="class-card">
+
+                    <figure class="card-banner img-holder"
+                            style="--width: 416; --height: 240;">
+                      <img src="./assets/images/class-1.jpg"
+                           width="416"
+                           height="240"
+                           loading="lazy"
+                           alt="Levantamento de Peso"
+                           class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="title-wrapper">
+                        <h3 class="h3">
+                          <a href="explore.html"
+                             class="card-title"  k>Experimente 7 Dias Grátis</a>
+                        </h3>
+                      </div>
+
+                      <p class="card-text">
+                        7 dias de teste grátis para experimentar uma variedade de rotinas em nossos planos, desde Yoga, Pilates, Barre e muito mais para seu bem-estar geral.
+                      </p>
+                      <a href="explore.html"
+                         class="p1">Iniciar Teste Grátis</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="scrollbar-item">
+                  <div class="class-card">
+
+                    <figure class="card-banner img-holder"
+                            style="--width: 416; --height: 240;">
+                      <img src="./assets/images/class-2.jpg"
+                           width="416"
+                           height="240"
+                           loading="lazy"
+                           alt="Cardio & Força"
+                           class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="title-wrapper">
+                        <h3 class="h3">
+                          <a href="#"
+                             class="card-title">4 Semanas de HIIT</a>
+                        </h3>
+                      </div>
+
+                      <p class="card-text">
+                        4 semanas de HIIT é a combinação perfeita de exercícios de alta intensidade com um maior número de séries para tonificar completamente seu corpo.
+                      </p>
+                      <button class="b1">Em Breve!</button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="scrollbar-item">
+                  <div class="class-card">
+
+                    <figure class="card-banner img-holder"
+                            style="--width: 416; --height: 240;">
+                      <img src="./assets/images/class-3.jpg"
+                           width="416"
+                           height="240"
+                           loading="lazy"
+                           alt="Power Yoga"
+                           class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="title-wrapper">
+                        <h3 class="h3">
+                          <a href="#"
+                             class="card-title">Power Yoga</a>
+                        </h3>
+                      </div>
+
+                      <p class="card-text">
+                        Um treino de alta intensidade que exige a transição rápida de uma posição para a próxima, sincronizando sua respiração com os movimentos do corpo.
+                      </p>
+                      <button class="b1">Em Breve!</button>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+        </section>
+
+
+  <section class="section class bg-dark has-bg-image"
+           id="class"
+           aria-label="class"
+           style="background-image: url('./assets/images/classes-bg.png')">
+    <div class="container">
+  
+      <p class="section-subtitle"
+         style="color:rgb(218, 229, 235)">Nossas Aulas</p>
+  
+      <h2 class="h2 section-title text-center">Aulas de Fitness Para Todos os Objetivos</h2>
+      <br>
+      <br>
+  
+      <ul class="class-list has-scrollbar">
+  
+        <li class="scrollbar-item">
+          <div class="class-card">
+  
+            <figure class="card-banner img-holder"
+                    style="--width: 416; --height: 240;">
+              <img src="./assets/images/peso3.jpg"
+                   width="416"
+                   height="240"
+                   loading="lazy"
+                   alt="Levantamento de Peso"
+                   class="img-cover">
+            </figure>
+  
+            <div class="card-content">
+  
+              <div class="title-wrapper">
+                <img src="./assets/images/class-icon-1.png"
+                     width="52"
+                     height="52"
+                     aria-hidden="true"
+                     alt=""
+                     class="title-icon">
+  
+                <h3 class="h3">
+                  <a href="#"
+                     class="card-title">Levantamento de Peso</a>
+                </h3>
+              </div>
+  
+              <p class="card-text">
+                Levantamento de peso refere-se geralmente a exercícios físicos e esportes em que as pessoas levantam pesos, muitas vezes na forma de halteres ou barras.
+              </p>
+  
+              <div class="card-progress">
+  
+                <div class="progress-wrapper">
+                  <p class="progress-label">Turma Cheia</p>
+  
+                  <span class="progress-value">85%</span>
+                </div>
+  
+                <div class="progress-bg">
+                  <div class="progress-bar"
+                       style="width: 85%"></div>
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+        </li>
+  
+        <li class="scrollbar-item">
+          <div class="class-card">
+  
+            <figure class="card-banner img-holder"
+                    style="--width: 416; --height: 240;">
+              <img src="./assets/images/peso2.jpg"
+                   width="416"
+                   height="240"
+                   loading="lazy"
+                   alt="Cardio & Força"
+                   class="img-cover">
+            </figure>
+  
+            <div class="card-content">
+  
+              <div class="title-wrapper">
+                <img src="./assets/images/class-icon-2.png"
+                     width="52"
+                     height="52"
+                     aria-hidden="true"
+                     alt=""
+                     class="title-icon">
+  
+                <h3 class="h3">
+                  <a href="#"
+                     class="card-title">Cardio & Força</a>
+                </h3>
+              </div>
+  
+              <p class="card-text">
+                Exercícios de cardio como correr, sprints e pular corda aumentam sua frequência cardíaca e você precisa de mais oxigênio para continuar.
+              </p>
+  
+              <div class="card-progress">
+  
+                <div class="progress-wrapper">
+                  <p class="progress-label">Turma Cheia</p>
+  
+                  <span class="progress-value">70%</span>
+                </div>
+  
+                <div class="progress-bg">
+                  <div class="progress-bar"
+                       style="width: 70%"></div>
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+        </li>
+  
+        <li class="scrollbar-item">
+          <div class="class-card">
+  
+            <figure class="card-banner img-holder"
+                    style="--width: 416; --height: 240;">
+              <img src="./assets/images/class-3.jpg"
+                   width="416"
+                   height="240"
+                   loading="lazy"
+                   alt="Power Yoga"
+                   class="img-cover">
+            </figure>
+  
+            <div class="card-content">
+  
+              <div class="title-wrapper">
+                <img src="./assets/images/class-icon-3.png"
+                     width="52"
+                     height="52"
+                     aria-hidden="true"
+                     alt=""
+                     class="title-icon">
+  
+                <h3 class="h3">
+                  <a href="#"
+                     class="card-title">Power Yoga</a>
+                </h3>
+              </div>
+  
+              <p class="card-text">
+                É um treino de alta intensidade e ritmo acelerado que exige mudanças rápidas de posição enquanto você sincroniza sua respiração com os diversos movimentos do corpo.
+              </p>
+  
+              <div class="card-progress">
+  
+                <div class="progress-wrapper">
+                  <p class="progress-label">Turma Cheia</p>
+  
+                  <span class="progress-value">90%</span>
+                </div>
+  
+                <div class="progress-bg">
+                  <div class="progress-bar"
+                       style="width: 90%"></div>
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+        </li>
+  
+        <li class="scrollbar-item">
+          <div class="class-card">
+  
+            <figure class="card-banner img-holder"
+                    style="--width: 416; --height: 240;">
+              <img src="./assets/images/class-4.jpg"
+                   width="416"
+                   height="240"
+                   loading="lazy"
+                   alt="Pacote Fitness"
+                   class="img-cover">
+            </figure>
+  
+            <div class="card-content">
+  
+              <div class="title-wrapper">
+                <img src="./assets/images/class-icon-4.png"
+                     width="52"
+                     height="52"
+                     aria-hidden="true"
+                     alt=""
+                     class="title-icon">
+  
+                <h3 class="h3">
+                  <a href="#"
+                     class="card-title">Pacote Fitness</a>
+                </h3>
+              </div>
+  
+              <p class="card-text">
+                Fitness é um estado de saúde e bem-estar e a capacidade de realizar atividades diárias. Isso vem através de uma dieta equilibrada, alguns exercícios e descanso adequado.
+              </p>
+  
+              <div class="card-progress">
+  
+                <div class="progress-wrapper">
+                  <p class="progress-label">Turma Cheia</p>
+  
+                  <span class="progress-value">60%</span>
+                </div>
+  
+                <div class="progress-bg">
+                  <div class="progress-bar"
+                       style="width: 60%"></div>
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+        </li>
+  
+      </ul>
+  
+    </div>
+  </section>
+  
+  <!-- RODAPÉ -->
+  
+  <footer class="footer"
+          id="p1">
+  
+    <div class="section footer-top bg-dark has-bg-image"
+         style="background-image: url('./assets/images/footer-bg.png')">
+      <div class="container">
+  
+        <div class="footer-brand">
+  
+          <a href="#"
+             class="logo">
+            <ion-icon name="barbell-sharp"
+                      aria-hidden="true"></ion-icon>
+  
+            <span class="span">Bluefit</span>
+          </a>
+  
+          <p class="footer-brand-text">
+            Horários para conectar!!
+          </p>
+  
+          <div class="wrapper">
+  
+            <img src="./assets/images/footer-clock.png"
+                 width="34"
+                 height="34"
+                 loading="lazy"
+                 alt="Relógio">
+  
+            <ul class="footer-brand-list">
+  
+              <li>
+                <p class="footer-brand-title">Segunda - Sexta</p>
+  
+                <p>7:00 - 22:00</p>
+              </li>
+  
+              <li>
+                <p class="footer-brand-title">Sábado - Domingo</p>
+  
+                <p>7:00 - 14:00</p>
+              </li>
+  
+            </ul>
+  
+          </div>
+  
+        </div>
+  
+        <ul class="footer-list">
+  
+          <li>
+            <p class="footer-list-title has-before">Nossos Links</p>
+          </li>
+  
+          <li>
+            <a href="index.html"
+               class="footer-link">Início</a>
+          </li>
+  
+          <li>
+            <a href="#about"
+               class="footer-link">Sobre Nós</a>
+          </li>
+  
+          <li>
+            <a href="#class"
+               class="footer-link">Aulas</a>
+          </li>
+          <li>
+            <a href="membership.html"
+               class="footer-link">Membresia</a>
+          </li>
+  
+          <li>
+            <a href="BMI.html"
+               class="footer-link">IMC</a>
+          </li>
+  
+          <li>
+            <a href="Fitness Centre.html"
+               class="footer-link">Centros</a>
+          </li>
+  
+        </ul>
+  
+        <ul class="footer-list">
+  
+          <li>
+            <p class="footer-list-title has-before">Entre em Contato</p>
+          </li>
+  
+          <li class="footer-list-item">
+                    <div class="icon">
+                      <ion-icon name="call"
+                                aria-hidden="true"></ion-icon>
+                    </div>
+                    
+                    <div>
+                      <a href="tel:(11) 9 9999-9999"
+                         class="footer-link">(11) 9 9999-9999</a>
+                    
+                      <a href="tel:(11) 9 9999-9999"
+                         class="footer-link">(11) 9 9999-9999</a>
+                    </div>
+                    </li>
+                    
+                    <li class="footer-list-item">
+                      <div class="icon">
+                        <ion-icon name="mail"
+                                  aria-hidden="true"></ion-icon>
+                      </div>
+                    
+                      <div>
+                        <a href="mailto:info@Bluefit.com"
+                           class="footer-link">bluefit@contato.com</a>
+                    
+                        <a href="mailto:services@Bluefit.com"
+                           class="footer-link">services@Bluefit.com</a>
+                      </div>
+                    </li>
+                    
+                    </ul>
+                    
+                    <ul class="footer-list">
+                    
+                      <li>
+                        <p class="footer-list-title has-before">Planos de Membresia</p>
+                      </li>
+                    
+                      <li>
+                        <a href="membership.html"
+                           class="footer-link">Desafio de 4 Semanas</a>
+                      </li>
+                    
+                      <li>
+                        <a href="membership.html"
+                           class="footer-link">Novas Membresias</a>
+                      </li>
+                    
+                      <li>
+                        <a href="membership.html"
+                           class="footer-link">Cartões Presente</a>
+                      </li>
+                    
+                      <li>
+                        <a href="membership.html"
+                           class="footer-link">Ofertas Especiais</a>
+                      </li>
+                    
+                    </ul>
+                    
+                    <ul class="footer-list">
+                    
+                      <li>
+                        <p class="footer-list-title has-before">Nossa Localização</p>
+                      </li>
+                    
+                      <li>
+                        <a href="Fitness Centre.html"
+                           class="footer-link">Localização dos Centros de Fitness</a>
+                      </li>
+                    
+                      <li>
+                        <a href="#"
+                           class="footer-link">Academia Atlética</a>
+                      </li>
+                    
+                      <li>
+                        <a href="#"
+                           class="footer-link">Centro de Yoga</a>
+                      </li>
+                    
+                      <li>
+                        <a href="#"
+                           class="footer-link">Fitness Cardio</a>
+                      </li>
+                    
+                    </ul>
+                    
+                    </div>
+                    </div>
+                    
+                    <div class="footer-bottom">
+                      <div class="container">
+                    
+                        <p class="copyright">
+                          Desenvovido por www.devthm.site &copy; 2023 Todos os Direitos Reservados á Bluefit.</>
+                        </p>
+                    
+                      </div>
+                    </div>
+                    
+                    </footer>
+                    
+                    <script src="./assets/js/script.js"
+                            defer></script>
+                    <script type="module"
+                            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                    <script nomodule
+                            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                    
+                    </body>
+                    
+                    </html>
