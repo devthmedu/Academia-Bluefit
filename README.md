@@ -1,8 +1,6 @@
-Claro! Aqui está um modelo de README para o seu projeto, que inclui informações sobre o projeto, como configurá-lo e utilizá-lo:
-
----
-
 # Bluefit
+
+![Bluefit](https://github.com/user-attachments/assets/e529c5d6-2ced-453c-a339-d5d61024bd62)
 
 ## Descrição
 
