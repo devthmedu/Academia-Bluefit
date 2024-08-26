@@ -1,9 +1,9 @@
 :root {
   /**
-   * colors
+   * Cores
    */
   --rich-black-fogra-29_50: hsl(210, 26%, 11%, 0.5);
-  --rich-black-fogra-29-1: hsl(210, 26%, 11%);
+  --rich-black-fogra-29: hsl(210, 26%, 11%);
   --rich-black-fogra-29-2: hsl(210, 50%, 4%);
   --silver-metallic: hsl(212, 9%, 67%);
   --coquelicot_20: #2f387f;
@@ -19,7 +19,7 @@
   --white: hsl(0, 0%, 100%);
 
   /**
-   * typography
+   * Tipografia
    */
   --ff-catamaran: 'Catamaran', sans-serif;
   --ff-rubik: 'Rubik', sans-serif;
@@ -37,12 +37,12 @@
   --fw-500: 500;
 
   /**
-   * spacing
+   * Espaçamento
    */
   --section-padding: 80px;
 
   /**
-   * transition
+   * Transições
    */
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease;
@@ -50,7 +50,7 @@
   --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
 }
 
-/* Reset básico para garantir que todos os navegadores comecem do mesmo ponto */
+/* Reset básico */
 *,
 *::before,
 *::after {
@@ -59,7 +59,9 @@
   box-sizing: border-box;
 }
 
-li { list-style: none; }
+li {
+  list-style: none;
+}
 
 a {
   text-decoration: none;
@@ -72,9 +74,13 @@ span,
 input,
 button,
 strong,
-ion-icon { display: block; }
+ion-icon {
+  display: block;
+}
 
-img { height: auto; }
+img {
+  height: auto;
+}
 
 input,
 button {
@@ -83,17 +89,25 @@ button {
   font: inherit;
 }
 
-input { width: 100%; }
+input {
+  width: 100%;
+}
 
-button { cursor: pointer; }
+button {
+  cursor: pointer;
+}
 
-ion-icon { pointer-events: none; }
+ion-icon {
+  pointer-events: none;
+}
 
-address { font-style: normal; }
+address {
+  font-style: normal;
+}
 
 html {
   font-family: var(--ff-rubik);
-  font-size: 10px;
+  font-size: 62.5%; /* 1rem = 10px */
   scroll-behavior: smooth;
 }
 
@@ -138,11 +152,14 @@ body {
   text-decoration: none;
   font-size: var(--fs-6);
   font-weight: var(--fw-500);
-  transition: color var(--transition-1);
+  padding: 10px 15px;
+  border-radius: var(--radius-5);
+  transition: background var(--transition-1), color var(--transition-1);
 }
 
 .navbar__link:hover {
-  color: var(--coquelicot); /* Cor de destaque */
+  background: var(--coquelicot_10); /* Cor de fundo ao passar o mouse */
+  color: var(--white);
 }
 
 .navbar__toggle {
@@ -203,7 +220,7 @@ form {
 
 .inputBox input,
 .inputBox textarea {
-    background-color: #fff;
+  background-color: #fff;
   width: 100%;
   padding: 14px;
   border: 3px solid var(--gainsboro);
@@ -270,92 +287,18 @@ form {
 @media (max-width: 768px) {
   .navbar__menu {
     display: none; /* Esconder o menu para telas menores */
-  }
-  
-  .navbar__toggle {
-    display: flex;
+    position: absolute;
+    top: 60px; /* Ajustar conforme necessário */
+    right: 20px;
+    background: var(--rich-black-fogra-29_50);
+    border-radius: var(--radius-10);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+    width: 200px;
+    padding:
   }
-  
-  .navbar__toggle .bar {
-    width: 30px;
-    height: 3px;
-    background: var(--white);
-    border-radius: 2px;
-  }
-  
-  .header__content h1 {
-    font-size: var(--fs-2);
-  }
-  
-  .header__content p {
-    font-size: var(--fs-5);
-  }
-  
-  .contact-info {
-    padding: 20px;
-  }
-  
-  .inputBox input,
-  .inputBox textarea {
-    padding: 12px;
-    font-size: var(--fs-6);
-  }
-  
-  .inputBox button {
-    padding: 14px;
-    font-size: var(--fs-5);
-  }
-}
-/* Estilo da navegação */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background: var(--rich-black-fogra-29_50); /* Fundo semi-transparente */
-  color: var(--white);
-}
 
-.navbar__logo {
-  font-size: var(--fs-5);
-  font-weight: var(--fw-700);
-  color: var(--white);
-  text-decoration: none;
-  transition: color var(--transition-1);
-}
-
-.navbar__logo:hover {
-  color: var(--coquelicot); /* Cor de destaque */
-}
-
-.navbar__menu {
-  display: flex;
-  gap: 20px;
-}
-
-.navbar__link {
-  color: var(--white);
-  text-decoration: none;
-  font-size: var(--fs-6);
-  font-weight: var(--fw-500);
-  padding: 10px 15px;
-  border-radius: var(--radius-5);
-  transition: background var(--transition-1), color var(--transition-1);
-}
-
-.navbar__link:hover {
-  background: var(--coquelicot_10); /* Cor de fundo ao passar o mouse */
-  color: var(--white);
-}
-
-.navbar__toggle {
-  display: none; /* Esconder o botão de menu para telas maiores */
-}
-
-/* Estilo para menu mobile */
+  /* Estilos responsivos */
 @media (max-width: 768px) {
   .navbar__menu {
     display: none; /* Esconder o menu para telas menores */
@@ -383,7 +326,7 @@ form {
     background: var(--white);
     border-radius: 2px;
   }
-  
+
   .navbar__menu.active {
     display: flex; /* Mostrar o menu quando ativo */
   }
@@ -391,5 +334,53 @@ form {
   .navbar__link {
     padding: 15px 20px;
     font-size: var(--fs-5);
+  }
+
+  .header__content h1 {
+    font-size: var(--fs-2);
+  }
+  
+  .header__content p {
+    font-size: var(--fs-5);
+  }
+  
+  .contact-info {
+    padding: 20px;
+  }
+  
+  .inputBox input,
+  .inputBox textarea {
+    padding: 12px;
+    font-size: var(--fs-6);
+  }
+  
+  .inputBox button {
+    padding: 14px;
+    font-size: var(--fs-5);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar__menu {
+    width: 100%;
+    right: 0;
+    top: 50px; /* Ajustar conforme necessário */
+  }
+
+  .navbar__link {
+    padding: 10px;
+    font-size: var(--fs-6);
+  }
+
+  .header__content h1 {
+    font-size: var(--fs-3);
+  }
+
+  .header__content p {
+    font-size: var(--fs-6);
+  }
+
+  .contact-info {
+    padding: 15px;
   }
 }
